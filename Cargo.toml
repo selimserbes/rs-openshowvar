@@ -1,0 +1,41 @@
+[package]
+name = "rs_openshowvar"
+version = "0.1.5"
+authors = ["Selim Serbes <omnicoder.ceng@gmail.com>"]
+edition = "2021"
+description = "A Rust library for connecting to Kuka robots and performing data read/write operations using the OpenShowVar protocol."
+license = "MIT"
+repository = "https://github.com/selimserbes/rs_openshowvar"
+documentation = "https://docs.rs/rs_openshowvar"
+readme = "README.md"
+keywords = ["kuka", "robotics", "automation", "network", "tcp"]
+categories = ["network-programming"]
+
+[[example]]
+name = "example"
+path = "examples/example.rs"
+
+[[test]]
+name = "e2e"
+path = "tests/e2e/test.rs"
+
+[[test]]
+name = "integration_connect"
+path = "tests/integration/connect.rs"
+
+[[test]]
+name = "integration_read"
+path = "tests/integration/read.rs"
+
+[[test]]
+name = "integration_write"
+path = "tests/integration/write.rs"
+
+[[test]]
+name = "integration_disconnect"
+path = "tests/integration/disconnect.rs"
+
+[[test]]
+name = "unit"
+path = "tests/unit/test.rs"
+
