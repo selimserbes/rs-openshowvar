@@ -1,11 +1,11 @@
 [package]
 name = "rs_openshowvar"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["Selim Serbes <omnicoder.ceng@gmail.com>"]
 edition = "2021"
 description = "A Rust library for connecting to Kuka robots and performing data read/write operations using the OpenShowVar protocol."
 license = "MIT"
-repository = "https://github.com/selimserbes/rs_openshowvar"
+repository = "https://github.com/selimserbes/rs-openshowvar"
 documentation = "https://docs.rs/rs_openshowvar"
 readme = "README.md"
 keywords = ["kuka", "robotics", "automation", "network", "tcp"]

@@ -25,3 +25,7 @@
 
 - Library definition errors have been fixed.
 - Additional information notes were added to the README.md section.
+
+## [0.1.6] - 2024-06-14
+
+- Github repository name was changed from `rs_openshowvar` to `rs-openshowvar`.
