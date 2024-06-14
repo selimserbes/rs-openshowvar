@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"rs_openshowvar":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.78.0/core/panic/unwind_safe/trait.UnwindSafe.html\" title=\"trait core::panic::unwind_safe::UnwindSafe\">UnwindSafe</a> for <a class=\"struct\" href=\"rs_openshowvar/struct.OpenShowVar.html\" title=\"struct rs_openshowvar::OpenShowVar\">OpenShowVar</a>",1,["rs_openshowvar::OpenShowVar"]]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
