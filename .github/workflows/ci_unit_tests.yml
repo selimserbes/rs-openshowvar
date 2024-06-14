@@ -17,7 +17,7 @@ jobs:
       - name: Set up Rust
         uses: raftario/setup-rust-action@v1
         with:
-          toolchain: stable
+          rust-channel: stable
 
       - name: Run unit tests
         run: cargo test --test unit
