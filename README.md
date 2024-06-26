@@ -6,6 +6,14 @@
 
 `rs_openshowvar` is a Rust library that facilitates connecting to robot systems via TCP/IP to perform read and write operations. Targeting the KukaVarProxy server, it allows access to Kuka robots using the OpenShowVar protocol. This library is designed for use in robot control and monitoring applications, providing reliable communication over TCP/IP and extensive functionality for managing robot variables.
 
+## Related Repositories
+
+This project is inspired by the following repositories:
+
+- [KUKAVARPROXY](https://github.com/ImtsSrl/KUKAVARPROXY)
+- [JOpenShowVar](https://github.com/aauc-mechlab/JOpenShowVar)
+- [kukavarproxy-msg-format](https://github.com/ahmad-saeed/kukavarproxy-msg-format)
+
 ## KukaVarProxy Message Format
 
 The communication with KukaVarProxy follows this message format:
@@ -24,7 +32,7 @@ Add `rs_openshowvar` as a dependency in your `Cargo.toml`:
 
 ```toml
 [dependencies]
-rs_openshowvar = "0.1.6"
+rs_openshowvar = "0.1.7"
 ```
 
 ## Usage
