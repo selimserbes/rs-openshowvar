@@ -33,3 +33,7 @@
 ## [0.1.7] - 2024-06-26
 
 - Additional information notes were added to the README.md section.
+
+## [0.1.8] - 2024-07-22
+
+- Updated e2e tests and refined error handling.

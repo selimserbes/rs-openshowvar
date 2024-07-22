@@ -1,6 +1,6 @@
 # rs_openshowvar
 
-`rs_openshowvar` is a Rust library for interacting with Kuka robots over TCP/IP using the OpenShowVar protocol.
+[`rs_openshowvar`](https://crates.io/crates/rs_openshowvar) is a Rust library for interacting with Kuka robots over TCP/IP using the OpenShowVar protocol.
 
 ## Overview
 
@@ -32,7 +32,7 @@ Add `rs_openshowvar` as a dependency in your `Cargo.toml`:
 
 ```toml
 [dependencies]
-rs_openshowvar = "0.1.7"
+rs_openshowvar = "0.1.8"
 ```
 
 ## Usage

@@ -1,6 +1,4 @@
 use rs_openshowvar::OpenShowVar;
-use std::thread;
-use std::time::Duration;
 
 // WARNING: These tests use real connections to test the functionality of the library that implements the OpenShowVar protocol.
 // Since they work with real data, running these tests may lead to unintended consequences in robot systems.
@@ -24,9 +22,6 @@ fn test_write_and_read_with_real_robot() {
     // Performing the variable writing operation
     let write_result = osv.write(variable_name, &value.to_string());
     assert!(write_result.is_ok(), "Variable writing failed");
-
-    // Waiting for the value to propagate
-    thread::sleep(Duration::from_secs(1));
 
     // Performing the variable reading operation
     let read_result = osv.read(variable_name);
@@ -60,6 +55,12 @@ fn test_open_show_var_error_handling() {
     assert!(
         osv.read("non_existing_var").is_err(),
         "Successful reading of a non-existent variable"
+    );
+
+    // Testing writing to a non-existent variable
+    assert!(
+        osv.write("non_existing_var", "value").is_err(),
+        "Successful writing to a non-existent variable"
     );
 
     // Testing disconnecting without an active connection
