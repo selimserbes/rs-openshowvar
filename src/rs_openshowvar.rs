@@ -62,6 +62,29 @@ impl OpenShowVar {
         Ok(())
     }
 
+    /// Checks if the connection to the TCP server is active.
+    ///
+    /// # Returns
+    ///
+    /// Returns `true` if the connection is active, `false` otherwise.
+    ///
+    /// # Example
+    ///
+    /// ```
+    /// use rs_openshowvar::OpenShowVar;
+    /// let mut osv = OpenShowVar::new("127.0.0.1".to_string(), 7000);
+    /// osv.connect().unwrap();
+    /// assert!(osv.is_connected());
+    /// ```
+    pub fn is_connected(&self) -> bool {
+        // Check if the connection object exists and the peer address is accessible
+        if let Some(ref conn) = self.conn {
+            conn.peer_addr().is_ok()
+        } else {
+            false
+        }
+    }
+
     /// Sends a variable value.
     ///
     /// # Arguments

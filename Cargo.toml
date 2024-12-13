@@ -1,6 +1,6 @@
 [package]
 name = "rs_openshowvar"
-version = "0.1.8"
+version = "1.0.0"
 authors = ["Selim Serbes <omnicoder.ceng@gmail.com>"]
 edition = "2021"
 description = "A Rust library for connecting to Kuka robots and performing data read/write operations using the OpenShowVar protocol."

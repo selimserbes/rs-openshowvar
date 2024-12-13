@@ -38,6 +38,13 @@ pub fn main() {
         }
     }
 
+    // Check if the connection is active using the is_connected method
+    if robot.is_connected() {
+        println!("Connection is active.");
+    } else {
+        println!("Connection is not active.");
+    }
+
     // Specify the variable name and value
     let variable_name = "existing_var";
     let value = "new_value";

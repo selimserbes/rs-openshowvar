@@ -32,7 +32,7 @@ Add `rs_openshowvar` as a dependency in your `Cargo.toml`:
 
 ```toml
 [dependencies]
-rs_openshowvar = "0.1.8"
+rs_openshowvar = "1.0.0"
 ```
 
 ## Usage
@@ -62,6 +62,13 @@ pub fn main() {
             println!("Connection error: {}", e);
             return;
         }
+    }
+
+    // Check if the connection is active using the is_connected method
+    if robot.is_connected() {
+        println!("Connection is active.");
+    } else {
+        println!("Connection is not active.");
     }
 
     // Specify the variable name and value

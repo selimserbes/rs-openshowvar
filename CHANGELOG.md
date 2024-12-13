@@ -37,3 +37,13 @@
 ## [0.1.8] - 2024-07-22
 
 - Updated e2e tests and refined error handling.
+
+## [1.0.0] - 2024-12-13
+
+### Added
+
+- `is_connected` method added to `OpenShowVar` for checking the connection status.
+
+### Changed
+
+- Library reached stable release with version `1.0.0`.

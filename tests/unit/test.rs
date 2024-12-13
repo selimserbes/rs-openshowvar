@@ -75,6 +75,32 @@ fn test_connect() {
     assert!(osv.conn.is_some());
 }
 
+// Tests the `is_connected` method of the `OpenShowVar` struct.
+#[test]
+fn test_is_connected() {
+    // Start a mock server
+    let (listener, _handle) = start_mock_server();
+    let addr = listener.local_addr().unwrap();
+
+    // Create an `OpenShowVar` instance
+    let mut osv = OpenShowVar::new(addr.ip().to_string(), addr.port());
+
+    // Before connecting, `is_connected` should return false
+    assert!(!osv.is_connected());
+
+    // Connect to the mock server
+    osv.connect().unwrap();
+
+    // After connecting, `is_connected` should return true
+    assert!(osv.is_connected());
+
+    // Disconnect from the mock server
+    osv.disconnect();
+
+    // After disconnecting, `is_connected` should return false
+    assert!(!osv.is_connected());
+}
+
 // Tests the `send` method of the `OpenShowVar` struct.
 #[test]
 fn test_send() {
