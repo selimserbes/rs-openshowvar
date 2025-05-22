@@ -1,5 +1,6 @@
 use std::io::{Read, Write};
 use std::net::TcpStream;
+use std::time::Duration;
 
 /// The `OpenShowVar` structure is used to connect to a robot control system and read/write variable values over a TCP connection.
 pub struct OpenShowVar {
@@ -58,7 +59,11 @@ impl OpenShowVar {
         // Create address by combining IP address and port number
         let addr = format!("{}:{}", self.tcp_ip, self.tcp_port);
         // Establish TCP connection
-        self.conn = Some(TcpStream::connect(addr)?);
+        let stream = TcpStream::connect(addr)?;
+        // Set a 5-second timeout for both reading and writing on the connection
+        stream.set_read_timeout(Some(Duration::new(5, 0)))?;
+        stream.set_write_timeout(Some(Duration::new(5, 0)))?;
+        self.conn = Some(stream);
         Ok(())
     }
 
@@ -149,8 +154,12 @@ impl OpenShowVar {
 
         // If connection exists, send the request
         if let Some(ref mut conn) = self.conn {
+            // Set a 2-second timeout for writing from the connection
+            conn.set_write_timeout(Some(Duration::new(2, 0)))?;
             conn.write_all(&request)?;
             let mut response = vec![0u8; 1024];
+            // Set a 2-second timeout for reading from the connection
+            conn.set_read_timeout(Some(Duration::new(2, 0)))?;
             let n = conn.read(&mut response)?;
             response.truncate(n);
 

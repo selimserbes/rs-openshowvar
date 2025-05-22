@@ -32,7 +32,7 @@ Add `rs_openshowvar` as a dependency in your `Cargo.toml`:
 
 ```toml
 [dependencies]
-rs_openshowvar = "1.0.0"
+rs_openshowvar = "1.0.1"
 ```
 
 ## Usage

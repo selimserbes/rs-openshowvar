@@ -47,3 +47,10 @@
 ### Changed
 
 - Library reached stable release with version `1.0.0`.
+
+## [1.0.2] - 2025-05-22
+
+### Added
+
+- Added connection timeout in `connect()` method to limit the duration of establishing TCP connection.
+- Added read/write timeouts in `send()` method to prevent indefinite blocking during TCP operations in the OpenShowVar library.
